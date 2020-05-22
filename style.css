@@ -26,6 +26,12 @@ h4 {
   text-shadow: 0 2px 1px #333;
 }
 
+h2:first-child,
+h3:first-child,
+h4:first-child {
+  margin-top: 0;
+}
+
 h1 {
   margin: 32px 0;
   font-size: 54px;
@@ -170,4 +176,10 @@ ul.bulletless {
   span.logo {
     line-height: 0.9;
   }
+}
+
+/* Ko-fi */
+.btn-container {
+  width: 100%;
+  text-align: center !important;
 }
