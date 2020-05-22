@@ -1,0 +1,108 @@
+html {
+  min-height: 100vh;
+  background: repeating-linear-gradient(
+    -55deg,
+    #222,
+    #222 10px,
+    #333 10px,
+    #333 20px
+  );
+
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+div.block {
+  margin: 128px auto 64px auto;
+  width: 90%;
+  max-width: 512px;
+  padding: 16px;
+  background-color: #666;
+  border: 1px solid #333;
+  border-bottom: 3px solid #333;
+  border-radius: 5px;
+  box-shadow: 0 12px 1px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.1),
+    0 2px 6px rgba(0, 0, 0, 0.3), 0 6px 10px rgba(0, 0, 0, 0.2),
+    0 10px 20px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.2),
+    0 40px 40px rgba(0, 0, 0, 0.15);
+}
+
+div.title {
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 54px;
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+
+  text-shadow: 0 1px 0 #bbb, 0 2px 0 #b0b0b0, 0 3px 0 #aaa, 0 4px 0 #a0a0a0,
+    0 5px 0 #999, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+span.logo {
+  display: inline-block;
+  height: 38px;
+  width: 38px;
+  margin-top: -8px;
+
+  vertical-align: middle;
+  line-height: 0.6;
+
+  background-color: white;
+  border-radius: 5px;
+  /* text-shadow: 0 -1px 0 black, 0 -2px 0 #b0b0b0, 0 -3px 0 #aaa; */
+
+  box-shadow: 0 1px 0 #bbb, 0 2px 0 #b0b0b0, 0 3px 0 #aaa, 0 4px 0 #a0a0a0,
+    0 5px 0 #999, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+span.triangle {
+  color: transparent;
+  background-color: #333;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.5);
+}
+
+code,
+pre,
+kbd {
+  font-family: "SF Mono", Monaco, monospace;
+  font-size: 84%;
+}
+
+kbd {
+  padding: 0 4px;
+  border: 1px solid darkgray;
+  border-bottom: 2px solid lightgray;
+  border-radius: 2px;
+}
+
+footer {
+  text-align: center;
+}
+
+a,
+a:visited {
+  color: white;
+  text-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  /* outline: 1px dashed red; */
+}

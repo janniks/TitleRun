@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>TitleRun</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TitleRun</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h2>Welcome to TitleRun</h2>
-    <p>It's simple...</p>
-    <p>Here's some keyboard shortcuts:</p>
-    <ul>
-      <li><kbd>↑</kbd> (up arrow key) to jump</li>
-      <li><kbd>S</kbd> to start the game</li>
-      <li><kbd>R</kbd> to reload</li>
-      <li>
-        <kbd>C</kbd> to to clear
-        <code>localStorage</code>
-      </li>
-      <li><kbd>1</kbd>-<kbd>3</kbd> to select a different map</li>
-    </ul>
+    <div class="block">
+      <div class="title">
+        <h1>
+          <span class="logo"><span class="triangle">▸</span></span> TitleRun
+        </h1>
+      </div>
+      <p>It's simple...</p>
+      <p>Here's some keyboard shortcuts:</p>
+      <ul>
+        <li><kbd>↑</kbd> (up arrow key) to jump</li>
+        <li><kbd>S</kbd> to start the game</li>
+        <li><kbd>R</kbd> to reload</li>
+        <li>
+          <kbd>C</kbd> to to clear
+          <code>localStorage</code>
+        </li>
+        <li><kbd>1</kbd>-<kbd>3</kbd> to select a different map</li>
+      </ul>
+    </div>
+    <footer>
+      <small>© <a href="https://janniks.com">janniks.com</a></small>
+    </footer>
     <script src="game.js"></script>
   </body>
 </html>

@@ -9,7 +9,15 @@ const BOX = {
   BOTTOM: "▖",
   TOP: "▘",
 };
+const MISC = {
+  FLAG_DARK: "⚑",
+  FLAG_LIGHT: "⚐",
+  PLAY: "▸",
+  STAR_DARK: "★",
+  STAR_LIGHT: "⭒",
+};
 const COLLISION = "collision";
+
 const JUMP_TIMEOUT = -1;
 const JUMP_LENGTH = 3;
 const DELAY_LOOP = 210;
@@ -17,14 +25,18 @@ const DELAY_INITIAL = 1000;
 
 const MAPS = {
   1: "                ▖     ▖        ▘     ▖   ▖    ▘    ▖      ⚑",
-  2: "    map2             ▖     ▖    ▘     ▖    ▘     ▖   ▖    ▘    ▖     ▖     ▖        ▘     ▖   ▖    ▘    ▖  ⚑",
-  3: "    map3             ▖    ▖    ▘    ▖   ▖   ▘   ▖    ▖    ▖   ▘    ▖   ▖   ▘   ▖     ⚑",
+  2: "    map 2             ▖     ▖    ▘     ▖    ▘     ▖   ▖    ▘    ▖     ▖     ▖        ▘     ▖   ▖    ▘    ▖  ⚑",
+  3: "    map 3             ▖    ▖    ▘    ▖   ▖   ▘   ▖    ▖    ▖   ▘    ▖   ▖   ▘   ▖     ⚑",
 };
 
 const GAME_URL = new URL(window.location.href);
-const MAP_SELECTED = GAME_URL.searchParams.get("map");
+const MAP =
+  GAME_URL.searchParams.get("map") in MAPS
+    ? GAME_URL.searchParams.get("map")
+    : 1;
+const DEBUG = !!GAME_URL.searchParams.get("debug") != undefined;
 
-let map = getMap();
+let map = loadMap(MAP);
 let jump = JUMP_TIMEOUT;
 let ticks = 0;
 let playing = false;
@@ -32,12 +44,17 @@ let win = true;
 
 const commands = {
   ArrowUp: () => {
+    if (!playing) {
+      return commands.s();
+    }
     if (jump <= JUMP_TIMEOUT) jump = JUMP_LENGTH;
   },
   s: async () => {
     playing = true;
+    faviconize("", 0);
     loopGame();
   },
+  " ": () => commands.ArrowUp(),
   r: async () => {
     playing = false;
     await dotDotDot("Restarting");
@@ -55,32 +72,40 @@ document.addEventListener("keydown", (event) => {
   if (event.isComposing || event.keyCode === 229) {
     return;
   }
-
+  log(event.key);
   if (event.key in commands) {
+    event.preventDefault();
     return commands[event.key]();
   }
-
   if (event.key in MAPS) {
+    event.preventDefault();
     return (location.href = `${location.origin}${location.pathname}?map=${event.key}`);
   }
 });
 
-main();
+// main
+loopPreGame();
 
-async function main() {
+async function loopPreGame() {
+  const welcomeMessage = MAP == 1 ? "Hit S to play!" : `MAP ${MAP}`;
+
+  faviconize(MISC.PLAY, 102);
+
   await sleep(DELAY_INITIAL);
   while (!playing) {
-    render("⚑ Hit S to play!");
+    render(`${MISC.FLAG_DARK} ${welcomeMessage}`);
     await sleep(DELAY_LOOP);
-    render("⚐ Hit S to play!");
+    render(`${MISC.FLAG_LIGHT} ${welcomeMessage}`);
     await sleep(DELAY_LOOP);
   }
 }
 
 async function loopGame() {
   while (playing && map.length > 0) {
-    let character = getCharacter(jump, map[0]);
+    const character = getCharacter(jump, map[0]);
+
     if (character == COLLISION) {
+      faviconize(MISC.STAR_LIGHT, 101);
       render(CHARACTER.CRASH, map, `SCORE ${ticks}`);
       win = false;
       break;
@@ -98,6 +123,8 @@ async function loopGame() {
 }
 
 async function loopWin() {
+  faviconize(MISC.FLAG_LIGHT, 104);
+
   while (playing) {
     document.title = "⭒ You win! ⭑";
     await sleep(DELAY_LOOP);
@@ -106,12 +133,11 @@ async function loopWin() {
   }
 }
 
-function getMap() {
+function loadMap(map) {
   if (readStorage()) {
     return readStorage();
   }
-  console.log(MAP_SELECTED);
-  return MAP_SELECTED in MAPS ? MAPS[MAP_SELECTED] : MAPS[1];
+  return MAPS[map];
 }
 
 function getCharacter(jump, tile) {
@@ -171,6 +197,39 @@ function hasCollision(character, tile) {
     (character == CHARACTER.BOTTOM && tile == BOX.BOTTOM) ||
     (character == CHARACTER.TOP && tile == BOX.TOP)
   );
+}
+
+function faviconize(character, offset) {
+  const canvas = document.createElement("canvas");
+  canvas.height = 128;
+  canvas.width = 128;
+
+  const ctx = canvas.getContext("2d");
+  let radius = 96;
+  ctx.lineJoin = "round";
+  ctx.lineWidth = radius;
+  ctx.strokeRect(radius / 2, radius / 2, 128 - radius, 128 - radius);
+  ctx.fillRect(radius / 2, radius / 2, 128 - radius, 128 - radius);
+  ctx.stroke();
+  ctx.fill();
+  ctx.fillStyle = "white";
+  ctx.font = "128px serif";
+  ctx.textAlign = "center";
+  ctx.fillText(character, 64, offset);
+
+  const link =
+    document.querySelector("link[rel*='icon']") ||
+    document.createElement("link");
+
+  link.rel = "icon";
+  link.href = canvas.toDataURL();
+  document.getElementsByTagName("head")[0].appendChild(link);
+}
+
+function log() {
+  if (DEBUG) {
+    console.log(...arguments);
+  }
 }
 
 async function sleep(ms) {
