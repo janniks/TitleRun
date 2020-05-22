@@ -25,8 +25,8 @@ const DELAY_INITIAL = 1000;
 
 const MAPS = {
   1: "                ▖     ▖        ▘     ▖   ▖    ▘    ▖      ⚑",
-  2: "    map 2             ▖     ▖    ▘     ▖    ▘     ▖   ▖    ▘    ▖     ▖     ▖        ▘     ▖   ▖    ▘    ▖  ⚑",
-  3: "    map 3             ▖    ▖    ▘    ▖   ▖   ▘   ▖    ▖    ▖   ▘    ▖   ▖   ▘   ▖     ⚑",
+  2: "                 ▖     ▖    ▘     ▖    ▘     ▖   ▖    ▘    ▖     ▖     ▖        ▘     ▖   ▖    ▘    ▖  ⚑",
+  3: "                 ▖    ▖    ▘    ▖   ▖   ▘   ▖    ▖    ▖   ▘    ▖   ▖   ▘   ▖     ⚑",
 };
 
 const GAME_URL = new URL(window.location.href);
@@ -119,16 +119,16 @@ async function loopGame() {
     await sleep(DELAY_LOOP);
   }
 
-  if (win) loopWin();
+  if (win) loopWin(ticks);
 }
 
-async function loopWin() {
+async function loopWin(score) {
   faviconize(MISC.FLAG_LIGHT, 104);
 
   while (playing) {
-    document.title = "⭒ You win! ⭑";
+    document.title = `⭒ You win! ⭑ SCORE ${score}`;
     await sleep(DELAY_LOOP);
-    document.title = "⭑ You win! ⭒";
+    document.title = `⭑ You win! ⭒ SCORE ${score}`;
     await sleep(DELAY_LOOP);
   }
 }

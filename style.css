@@ -21,7 +21,7 @@ div.block {
   width: 90%;
   max-width: 512px;
   padding: 16px;
-  background-color: #666;
+  background-color: #555;
   border: 1px solid #333;
   border-bottom: 3px solid #333;
   border-radius: 5px;
@@ -36,13 +36,26 @@ div.title {
   text-align: center;
 }
 
-h1 {
+p {
+  margin: 4px 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
   color: white;
-  font-size: 54px;
+  margin: 16px 0 4px 0;
+  font-weight: 900;
   font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  text-shadow: 0 2px 1px #333;
+}
 
+h1 {
+  margin: 32px 0;
+  font-size: 54px;
   text-shadow: 0 1px 0 #bbb, 0 2px 0 #b0b0b0, 0 3px 0 #aaa, 0 4px 0 #a0a0a0,
     0 5px 0 #999, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
     0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
@@ -88,9 +101,17 @@ kbd {
 
 kbd {
   padding: 0 4px;
-  border: 1px solid darkgray;
-  border-bottom: 2px solid lightgray;
+  color: #222;
+  background-color: white;
   border-radius: 2px;
+  box-shadow: 0 2px 1px #333;
+}
+
+kbd:hover {
+  cursor: default;
+  position: relative;
+  top: 1px;
+  box-shadow: 0 1px 1px #333;
 }
 
 footer {
@@ -101,6 +122,14 @@ a,
 a:visited {
   color: white;
   text-shadow: 0 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+ul li {
+  line-height: 1.5;
+}
+
+ul.bulletless {
+  list-style-type: none;
 }
 
 * {
