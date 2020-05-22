@@ -8,6 +8,34 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+p {
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: white;
+  margin: 32px 0 4px 0;
+  font-weight: 900;
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  text-shadow: 0 2px 1px #333;
+}
+
+h1 {
+  margin: 32px 0;
+  font-size: 54px;
+  text-shadow: 0 1px 0 #bbb, 0 2px 0 #b0b0b0, 0 3px 0 #aaa, 0 4px 0 #a0a0a0,
+    0 5px 0 #999, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
 div.background {
   position: fixed;
   top: 0;
@@ -42,34 +70,6 @@ div.block {
 div.title {
   width: 100%;
   text-align: center;
-}
-
-p {
-  margin: 8px 0;
-  line-height: 1.4;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  color: white;
-  margin: 32px 0 4px 0;
-  font-weight: 900;
-  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  text-shadow: 0 2px 1px #333;
-}
-
-h1 {
-  margin: 32px 0;
-  font-size: 54px;
-  text-shadow: 0 1px 0 #bbb, 0 2px 0 #b0b0b0, 0 3px 0 #aaa, 0 4px 0 #a0a0a0,
-    0 5px 0 #999, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
-    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
-    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
-    0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
 p.highlight {
@@ -156,4 +156,18 @@ ul li {
 
 ul.bulletless {
   list-style-type: none;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  div.block {
+    padding: 16px;
+  }
+
+  span.logo {
+    line-height: 0.9;
+  }
 }
