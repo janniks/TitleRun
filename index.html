@@ -11,31 +11,81 @@
     />
   </head>
   <body>
+    <div class="background"></div>
     <div class="block">
       <div class="title">
         <h1>
           <span class="logo"><span class="triangle">▸</span></span> TitleRun
         </h1>
       </div>
+      <p>Welcome to TitleRun — the game that only exists in your title bar.</p>
       <p>
         It's simple... Jump over the obastacles to survive and reach the flag!
       </p>
       <h2>Confused?</h2>
-      <p>
-        Wondering where the game is? Well... Look up! — Ahem, the *title bar*
-      </p>
-      <h2>Need Help?</h2>
+      <p>Wondering where the game is..? Well — Look up!</p>
+      <p><em>Ahem</em>, the <strong>*title bar*</strong></p>
+      <h2>Need help?</h2>
       <p>Here's some keyboard shortcuts:</p>
       <ul class="bulletless">
         <li><kbd>SPACE</kbd> / <kbd>↑</kbd> to jump</li>
         <li><kbd>S</kbd> to start the game</li>
         <li><kbd>R</kbd> to reload</li>
-        <li>
-          <kbd>C</kbd> to to clear
-          <code>localStorage</code>
-        </li>
-        <li><kbd>1</kbd>-<kbd>3</kbd> to select a different map</li>
+        <li><kbd>1</kbd>-<kbd>3</kbd> to load a specific map</li>
       </ul>
+      <h2>Wanna make your own map? &#9873;</h2>
+      <p>
+        You've played a few rounds and want to try creating a new map? Awesome!
+        You can add a map via your browsers <code>localStorage</code> (<a
+          href="https://developers.google.com/web/tools/chrome-devtools/storage/localstorage"
+          rel="nofollow"
+          >here's a guide for Chrome</a
+        >; other browsers work similarly). Simply, set the
+        <code>map</code> key-value pair. The value can be any string of unicode
+        characters. See the list below for more information on the building
+        blocks.
+      </p>
+      <p>
+        Hit <kbd>C</kbd> to clear the local <code>map</code> key-value pair.
+      </p>
+      <p>
+        Here's some building blocks (i.e., unicode characters) to get you
+        started:
+      </p>
+      <ul>
+        <li>
+          <span class="underline">&#8192;</span> whitespace for the map (i.e.,
+          <a href="https://unicodelookup.com/#&#8192;/1" rel="nofollow"
+            >en quad</a
+          >), trust me it's there
+        </li>
+        <li>
+          <span class="underline">&#9622;</span> bottom block (i.e.,
+          <a href="https://unicodelookup.com/#&#9622;/1" rel="nofollow"
+            >quadrant lower left</a
+          >)
+        </li>
+        <li>
+          <span class="underline">&#9624;</span> top block (i.e.,
+          <a href="https://unicodelookup.com/#&#9624;/1" rel="nofollow"
+            >quadrant upper left</a
+          >)
+        </li>
+        <li>
+          <span class="underline">&#9873;</span> goal flag,
+          <em>*optional, but a nice touch</em> (i.e.,
+          <a href="https://unicodelookup.com/#&#9873;/1" rel="nofollow"
+            >black flag</a
+          >)
+        </li>
+      </ul>
+      <p>
+        <em>
+          *Only top/bottom blocks cause collisions (i.e., need to be avoided
+          while playing). All other unicode characters will not harm the player
+          (yep, even <code>ãbç</code> ...)</em
+        >
+      </p>
     </div>
     <footer>
       <small>

@@ -205,13 +205,15 @@ function faviconize(character, offset) {
   canvas.width = 128;
 
   const ctx = canvas.getContext("2d");
-  let radius = 96;
+  const radius = 96;
+
   ctx.lineJoin = "round";
   ctx.lineWidth = radius;
   ctx.strokeRect(radius / 2, radius / 2, 128 - radius, 128 - radius);
   ctx.fillRect(radius / 2, radius / 2, 128 - radius, 128 - radius);
   ctx.stroke();
   ctx.fill();
+
   ctx.fillStyle = "white";
   ctx.font = "128px serif";
   ctx.textAlign = "center";
