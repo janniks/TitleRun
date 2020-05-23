@@ -1,0 +1,28 @@
+{
+  "name": "titlerun",
+  "version": "1.0.0",
+  "description": "The game that only exists in your title bar",
+  "main": "bookmarklet.js",
+  "scripts": {
+    "build": "node bookmarklet.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janniks/TitleRun.git"
+  },
+  "keywords": [
+    "titlerun",
+    "title",
+    "run"
+  ],
+  "author": "@jnnksbrt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/janniks/TitleRun/issues"
+  },
+  "homepage": "https://github.com/janniks/TitleRun#readme",
+  "devDependencies": {
+    "terser": "^4.7.0"
+  }
+}

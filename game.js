@@ -174,8 +174,8 @@ async function dotDotDot(message) {
 function readStorage() {
   try {
     return localStorage.getItem("map");
-  } catch {
-    console.log("Maybe somebody is blocking localStorage...");
+  } catch (error) {
+    localStorageError(error);
     return false;
   }
 }
@@ -183,9 +183,14 @@ function readStorage() {
 function clearStorage() {
   try {
     localStorage.removeItem("map");
-  } catch {
-    console.log("Maybe somebody is blocking localStorage...");
+  } catch (error) {
+    localStorageError(error);
   }
+}
+
+function localStorageError(error) {
+  console.log("Maybe somebody is blocking localStorage...");
+  console.error(error);
 }
 
 function render(character, map, comment) {
