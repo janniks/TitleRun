@@ -94,6 +94,7 @@ div.title {
 .bookmarklet {
   display: table;
   margin: auto;
+  margin-bottom: 20px;
   text-decoration: none;
 }
 
