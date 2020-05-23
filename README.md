@@ -8,6 +8,9 @@
   <a href="https://app.netlify.com/sites/titlerun/deploys">
     <img src="https://api.netlify.com/api/v1/badges/247ae2ed-5918-4818-970e-4cf81794dfd8/deploy-status" alt="Netlify status" />
   </a>
+  <a href="http://vanilla-js.com/">
+    <img src="http://vanilla-js.com/assets/button.png" alt="Vanilla JS" />
+  </a>
   <a href="https://github.com/janniks/TitleRun/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license" />
   </a>
@@ -24,7 +27,9 @@
 
 ## Installation
 
-`todo`
+TitleRun is just basic HTML/CSS/JavaScript and works without any dependencies. You can run the game by opening `index.html` in your browser.
+
+Dependencies are only needed if you want the bookmarklet button to work. Run `npm install` and `npm run build` to replace the bookmarklet placeholder in `index.html`.
 
 ## License
 

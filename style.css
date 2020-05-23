@@ -78,7 +78,7 @@ div.title {
   text-align: center;
 }
 
-p.highlight {
+.highlight {
   padding: 6px 8px;
   margin-bottom: 16px;
   width: auto;
@@ -87,6 +87,14 @@ p.highlight {
   background-color: #eee;
   border: 1px solid #333;
   border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.bookmarklet {
+  display: table;
+  margin: auto;
+  text-decoration: none;
 }
 
 span.logo {
