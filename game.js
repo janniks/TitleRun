@@ -44,13 +44,12 @@ let win = true;
 
 const commands = {
   ArrowUp: () => {
-    if (!playing) {
-      return commands.s();
-    }
+    if (!playing) return commands.s();
     if (jump <= JUMP_TIMEOUT) jump = JUMP_LENGTH;
   },
   s: async () => {
-    playing = true;
+    if (playing) return;
+
     faviconize("", 0);
     loopGame();
   },
@@ -60,7 +59,7 @@ const commands = {
     await dotDotDot("Restarting");
     location.reload();
   },
-  c: async () => {
+  m: async () => {
     playing = false;
     clearStorage();
     await dotDotDot("Clearing");
@@ -83,6 +82,8 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+// todo: add onblur message and favicon
+
 // main
 loopPreGame();
 
@@ -101,6 +102,7 @@ async function loopPreGame() {
 }
 
 async function loopGame() {
+  playing = true;
   while (playing && map.length > 0) {
     const character = getCharacter(jump, map[0]);
 
