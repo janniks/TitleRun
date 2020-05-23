@@ -1,14 +1,8 @@
 <p align="center">
-  <a href="https://titlerun.xyz" style="display: block !important; max-width: 600px !important; border-radius: 4px !important;">
-    <img src="og-image.png" alt="TitleRun—the game that only exists in your title bar"/>
+  <a href="https://titlerun.xyz">
+    <img src="og-image.png" alt="TitleRun—the game that only exists in your title bar" width=450/>
   </a>
 </p>
-
-<h3 align="center">
-  <a href="#installation-">Installation</a>
-  <span> · </span>
-  <a href="#license">License</a>
-</h3>
 
 <p align="center">
   <a href="https://app.netlify.com/sites/titlerun/deploys">
@@ -21,6 +15,12 @@
     <img src="https://img.shields.io/twitter/follow/jnnksbrt.svg?label=Follow%20@jnnksbrt" alt="Follow @jnnksbrt on Twitter" />
   </a>
 </p>
+
+<h3 align="center">
+  <a href="#installation-">Installation</a>
+  <span> · </span>
+  <a href="#license">License</a>
+</h3>
 
 ## Installation
 
