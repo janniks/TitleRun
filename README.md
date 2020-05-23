@@ -9,7 +9,7 @@
     <img src="https://api.netlify.com/api/v1/badges/247ae2ed-5918-4818-970e-4cf81794dfd8/deploy-status" alt="Netlify status" />
   </a>
   <a href="http://vanilla-js.com/">
-    <img src="http://vanilla-js.com/assets/button.png" alt="Vanilla JS" />
+    <img src="https://img.shields.io/badge/vanilla-js-yellow" alt="Vanilla JS" />
   </a>
   <a href="https://github.com/janniks/TitleRun/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license" />
