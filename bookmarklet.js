@@ -9,7 +9,7 @@ const terser = require("terser");
     const minified = terser.minify(game).code;
     const anonymous = `(function() {${minified}}());`;
     const bookmarklet = `javascript:${encodeURIComponent(anonymous)}`;
-    const replaced = index.replace(/_BOOKMARKLET_/g, bookmarklet);
+    const replaced = index.replace(/#BOOKMARKLET/g, bookmarklet);
 
     fs.writeFileSync("index.html", replaced, "utf8");
   } catch (error) {
