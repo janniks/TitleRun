@@ -20,7 +20,7 @@
 </p>
 
 <h2 align="center">
-  <a href="https://titlerun.xyz/">TitleRun.xyz</a>
+  <a href="https://titlerun.xyz/">▷ TitleRun.xyz</a>
 </h2>
 
 ## Installation
