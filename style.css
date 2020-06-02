@@ -105,11 +105,10 @@ span.logo {
   margin-top: -8px;
 
   vertical-align: middle;
-  line-height: 0.6;
+  line-height: 0.525;
 
   background-color: white;
   border-radius: 5px;
-  /* text-shadow: 0 -1px 0 black, 0 -2px 0 #b0b0b0, 0 -3px 0 #aaa; */
 
   box-shadow: 0 1px 0 #bbb, 0 2px 0 #b0b0b0, 0 3px 0 #aaa, 0 4px 0 #a0a0a0,
     0 5px 0 #999, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
@@ -120,7 +119,8 @@ span.logo {
 
 span.triangle {
   color: transparent;
-  background-color: #333;
+  background-color: #555;
+  font-size: 46px;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
