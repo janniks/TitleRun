@@ -3,7 +3,7 @@ const terser = require("terser");
 
 try {
   const index = fs.readFileSync("public/index.html", "utf8");
-  const game = fs.readFileSync("game.js", "utf8");
+  const game = fs.readFileSync("public/game.js", "utf8");
 
   const minified = terser.minify(game).code;
   const anonymous = `(function() {${minified}}());`;
