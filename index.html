@@ -14,7 +14,7 @@
     />
     <meta property="og:title" content="TitleRun" />
     <meta property="og:url" content="https://titlerun.xyz" />
-    <meta property="og:image" content="og-image.png" />
+    <meta property="og:image" content="img/og-image.png" />
     <meta
       property="og:description"
       content="The game that only exists in your title bar"
@@ -50,18 +50,36 @@
         <li><kbd>R</kbd> to reload</li>
         <li><kbd>1</kbd>-<kbd>3</kbd> to load a specific map</li>
       </ul>
+    </div>
+    <div class="block">
       <h2>Wanna make your own map?</h2>
       <p>
         You've played a few rounds and want to try creating a new map? Awesome!
-        You can add a map via your browsers <code>localStorage</code> (<a
-          href="https://developers.google.com/web/tools/chrome-devtools/storage/localstorage"
-          rel="noreferrer"
-          >here's a guide for Chrome</a
-        >; other browsers work similarly). Simply, set the
-        <code>map</code> key-value pair. The value can be any string of unicode
-        characters. See the list below for more information on the building
-        blocks.
+        You can add a map via your browsers <code>localStorage</code>. Simply,
+        set the <code>map</code> key-value pair. The value can be any string of
+        unicode characters.
       </p>
+      <p><em>e.g., this is what map #1 looks like:</em></p>
+      <p>
+        <span class="underline"
+          >&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#9622;&#8192;&#8192;&#8192;&#8192;&#8192;&#9622;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#9624;&#8192;&#8192;&#8192;&#8192;&#8192;&#9622;&#8192;&#8192;&#8192;&#9622;&#8192;&#8192;&#8192;&#8192;&#9624;&#8192;&#8192;&#8192;&#8192;&#9622;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#9873;</span
+        >
+      </p>
+      <a href="img/local-storage.png" target="_blank">
+        <img
+          src="img/local-storage.png"
+          alt="Chrome Developer Tools, Application Section, LocalStorage"
+        />
+      </a>
+      <figcaption>
+        <em>
+          <a
+            href="https://developers.google.com/web/tools/chrome-devtools/storage/localstorage"
+            rel="noreferrer"
+            >Here's a guide for Chrome</a
+          >; other browsers work similarly</em
+        >
+      </figcaption>
       <p>
         Hit <kbd>M</kbd> to clear the local <code>map</code> key-value pair.
       </p>
