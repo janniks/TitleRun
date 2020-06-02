@@ -27,9 +27,9 @@
 
 ## Installation
 
-TitleRun is just basic HTML/CSS/JavaScript and works without any dependencies. You can run the game by opening `index.html` in your browser.
+TitleRun is just basic HTML/CSS/JavaScript and works without any dependencies. You can run the game by opening [`public/index.html`](public/index.html) in your browser.
 
-Dependencies are only needed if you want the bookmarklet button to work. Run `npm install` and `npm run build` to replace the bookmarklet placeholder in `index.html`.
+Dependencies are only needed if you want the bookmarklet button to work. Run `npm install` and `npm run build` to replace the bookmarklet placeholder in [`public/index.html`](public/index.html).
 
 ## License
 
