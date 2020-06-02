@@ -11,8 +11,8 @@
   <a href="http://vanilla-js.com/">
     <img src="https://img.shields.io/badge/vanilla-js-yellow" alt="Vanilla JS" />
   </a>
-  <a href="https://github.com/janniks/TitleRun/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license" />
+  <a href="https://github.com/janniks/TitleRun/blob/master/COPYING">
+    <img src="https://img.shields.io/github/license/janniks/titlerun" alt="License" />
   </a>
   <a href="https://twitter.com/intent/follow?screen_name=jnnksbrt">
     <img src="https://img.shields.io/twitter/follow/jnnksbrt.svg?label=Follow%20@jnnksbrt" alt="Follow @jnnksbrt on Twitter" />
@@ -33,4 +33,4 @@ Dependencies are only needed if you want the bookmarklet button to work. Run `np
 
 ## License
 
-[MIT](LICENSE)
+[GNU GPLv3](COPYING)
