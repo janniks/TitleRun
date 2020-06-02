@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://titlerun.xyz">
-    <img src="og-image.png" alt="TitleRun—the game that only exists in your title bar" width=450/>
+    <img src="public/img/og-image.png" alt="TitleRun—the game that only exists in your title bar" width=450/>
   </a>
 </p>
 
