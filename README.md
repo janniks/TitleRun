@@ -19,11 +19,9 @@
   </a>
 </p>
 
-<h3 align="center">
-  <a href="#installation-">Installation</a>
-  <span> · </span>
-  <a href="#license">License</a>
-</h3>
+<h2 align="center">
+  <a href="https://titlerun.xyz/">TitleRun.xyz</a>
+</h2>
 
 ## Installation
 
