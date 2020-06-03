@@ -204,3 +204,14 @@ ul.bulletless {
   width: 100%;
   text-align: center !important;
 }
+
+.producthunt {
+  text-align: center;
+}
+
+.producthunt img {
+  width: 250px;
+  height: 54px;
+  border-radius: 12px;
+  text-align: center;
+}
