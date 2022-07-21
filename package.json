@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/janniks/TitleRun#readme",
   "devDependencies": {
-    "terser": "^4.7.0"
+    "terser": "^4.8.1"
   }
 }
