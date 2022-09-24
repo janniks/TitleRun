@@ -24,9 +24,10 @@ const DELAY_LOOP = 210;
 const DELAY_INITIAL = 1000;
 
 const MAPS = {
-  1: "                ▖     ▖        ▘     ▖   ▖    ▘    ▖      ⚑",
-  2: "                 ▖     ▖    ▘     ▖    ▘     ▖   ▖    ▘    ▖     ▖     ▖        ▘     ▖   ▖    ▘    ▖  ⚑",
-  3: "                 ▖    ▖    ▘    ▖   ▖   ▘   ▖    ▖    ▖   ▘    ▖   ▖   ▘   ▖     ⚑",
+  1:        "                ▖     ▖        ▘     ▖   ▖    ▘    ▖      ⚑",
+  2:        "                 ▖     ▖    ▘     ▖    ▘     ▖   ▖    ▘    ▖     ▖     ▖        ▘     ▖   ▖    ▘    ▖  ⚑",
+  3:        "                 ▖    ▖    ▘    ▖   ▖   ▘   ▖    ▖    ▖   ▘    ▖   ▖   ▘   ▖     ⚑",
+  "secret": "                  ▖▖    ▘▘▘▘▘      ▖ ▖     ▘▘▘▘▘     ▖▖   ▖▖       ▖       ▖ ▘     ⚑"
 };
 
 const GAME_URL = new URL(window.location.href);
